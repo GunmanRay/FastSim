@@ -1,9 +1,9 @@
-assocs_dump: "../slurm_dump/sacctmgr_assocs.csv"
-qos_dump: "../slurm_dump/sacctmgr_qos.csv"
-node_events_dump: "../slurm_dump/sacctmgr_events.csv"
-resv_dump_current: "../slurm_dump/sinfo_resv.csv"
-resv_dump_historic: "../slurm_dump/sreport_resv.csv"
-job_dump: "../slurm_dump/sacct_jobs.csv"
+assocs_dump: "../slurm_dump/assocs_dump.csv"
+qos_dump: "../slurm_dump/qos_dump.csv"
+node_events_dump: "../slurm_dump/node_events_dump.csv"
+resv_dump_current: "../slurm_dump/resv_dump_current.csv"
+resv_dump_historic: "../slurm_dump/resv_dump_historic.csv"
+job_dump: "../slurm_dump/job_dump.csv"
 slurm_conf: "../slurm_dump/slurm.conf"
 
 # This parameter is used to specificy the system being studied, which is necessary
@@ -11,7 +11,7 @@ slurm_conf: "../slurm_dump/slurm.conf"
 system: "default"
 
 # The partitions considered by the simulator. Jobs submitted to other partitions will be ignored.
-considered_partitions: ["debug", "short", "standard", "long", "standby"]
+considered_partitions: [0, 1, 2, 3, 4]
 
 # Slurm config parameters
 default_queue_depth: 100    # The default number of jobs to attempt scheduling (i.e. the queue depth) 
@@ -52,8 +52,8 @@ impromptu_reservation_names: [
                               "noderepair"
                               ] 
 
-initialize: True # Whether to start the simulator with an intial state at sim_start
-sim_start: '2025-01-01T00:00:00'
+initialize: False # Whether to start the simulator with an intial state at sim_start
+sim_start: '2020-01-01T00:00:00'
 sim_end: '2025-02-01T00:00:00'
 
 
